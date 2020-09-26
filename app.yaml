@@ -1,0 +1,13 @@
+service: ars-construction
+runtime: php55
+application_readable: true
+
+
+handlers:
+  - url: /(.+\.php)$
+    script: \1
+
+
+  - url: /.*
+    static_files: www
+    upload: www
